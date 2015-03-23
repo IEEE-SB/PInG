@@ -54,3 +54,4 @@ class Gpio:
 
     def unexport(self):
         self.wfifo("/sys/class/gpio/unexport", self.pin)
+        
