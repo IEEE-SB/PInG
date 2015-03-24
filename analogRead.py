@@ -6,11 +6,12 @@ def main():
    pinA0.direction("out")
    pinA0.value("0")
 
-   while True:
+   for i in range(10):
 	time.sleep(1)
 	a = pinA0.get_rfifo()
 	print a
-
+   
+   pinA0.unexport()   
 
 if __name__ == "__main__":
    main()
