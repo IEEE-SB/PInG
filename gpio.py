@@ -37,8 +37,13 @@ class Gpio:
         self.fifo.write(data)
         self.fifo.close()
 
-    def get_rfifo(self,file = '/sys/bus/iio/devices/iio:device0/in_voltage0_raw'):
-        self.fifo = open(file,"r")
+    def get_rfifo(self):
+        for key in dir.keys() :
+            if self.pin == dir[key]:
+                x = key.split('A')
+                c = x[1]       
+        self.file = = '/sys/bus/iio/devices/iio:device0/in_voltage'+str(c)+'_raw'
+        self.fifo = open(self.file,"r")
         self.a = self.fifo.read()
         self.fifo.close()
         return self.a
