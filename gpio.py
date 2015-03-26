@@ -42,7 +42,7 @@ class Gpio:
             if self.pin == dir[key]:
                 x = key.split('A')
                 c = x[1]       
-        self.file = = '/sys/bus/iio/devices/iio:device0/in_voltage'+str(c)+'_raw'
+        self.file = '/sys/bus/iio/devices/iio:device0/in_voltage'+str(c)+'_raw'
         self.fifo = open(self.file,"r")
         self.a = self.fifo.read()
         self.fifo.close()
