@@ -1,2 +1,6 @@
 # GalPy
 Python Library for the Intel Galileo, developed by @IEEE-SB Piraeus University of Applied Sciences
+
+The GalPy Library can be used for creating Python projects for Intel Galileo.
+Ηaving access to all analog and digital pins from your python code. An 
+alternative way to create projects in Intel Galileo using your favorite language - Python.
