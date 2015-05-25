@@ -63,7 +63,7 @@ class Gpio:
     # duty_cycle: 0-100%
     # nanoseconds: default 1000000 
     def pwm(self, duty_cycle, nanoseconds):
-        duty_cycle = get_value(duty_cycle)
+        duty_cycle = self.get_value(duty_cycle)
         self.wfifo("/sys/class/pwm/pwmchip0/pwm%s/period" %self.pin, nanoseconds)
         self.wfifo("/sys/class/pwm/pwmchip0/pwm%s/duty_cycle" %self.pin, duty_cycle)
 
