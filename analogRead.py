@@ -8,7 +8,7 @@ def main():
 
    for i in range(10):
 	time.sleep(1)
-	a = pinA0.get_rfifo()
+	a = pinA0.get_value()
 	print a
    
    pinA0.unexport()   

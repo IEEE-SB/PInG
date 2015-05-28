@@ -60,6 +60,9 @@ class Gpio:
         self.fifo.close()
         return self.a
 
+    def get_value(self):
+        return self.get_rfifo()
+        
     # duty_cycle: 0-100%
     # nanoseconds: default 1000000 
     def pwm(self, duty_cycle, nanoseconds):
