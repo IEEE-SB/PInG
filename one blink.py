@@ -9,8 +9,8 @@ def main():
     pin39.direction("out")
     
     for i in range(1000):
-        pin39.value("1")
-    pin39.value("0")
+        pin39.value("HIGH")
+    pin39.value("LOW")
     
     pin39.unexport()
     
